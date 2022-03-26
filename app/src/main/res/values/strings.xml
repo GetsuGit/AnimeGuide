@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Anime Guide</string>
+
+    <!-- anime -->
+    <string name="nama_character">Nama Karakter</string>
+    <string name="detail_character"><p>Naruto Uzumaki</p> (渦巻 鳴門, Uzumaki Naruto) adalah shinobi dari Konohagakure. Dia menjadi jinchūriki dari Ekor Sembilan pada hari kelahirannya — sebuah nasib yang menyebabkan dia dijauhi oleh sebagian besar penduduk Konoha sepanjang masa kecilnya. Setelah bergabung dengan Tim Kakashi, Naruto bekerja keras untuk mendapatkan pengakuan desa sambil mengejar mimpinya untuk menjadi Hokage. Pada tahun-tahun berikutnya, melalui banyak kesulitan dan cobaan berat, ia menjadi ninja yang cakap yang dianggap sebagai pahlawan baik oleh penduduk desa, dan segera setelah itu, seluruh dunia, sehingga dikenal sebagai Pahlawan dari Konoha (木ノ葉隠れの英雄, Konohagakure no Eiyū; Secara harfiah berarti "Hero of the Hidden Tree Leaves"). Dia segera terbukti menjadi salah satu faktor utama dalam memenangkan Perang Dunia Shinobi Keempat, yang membawanya mencapai mimpinya dan menjadi Hokage Ketujuh (七代目火影, Nanadaime Hokage; Secara harfiah berarti "Bayangan Api Ketujuh").</string>
+    <string name="About">About</string>
+    <string name="Share">Info</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Menu">List</string>
+
+    <!-- Tentang Aplikasi -->
+    <string name="Tentang_aplikasi"><p>Tentang Aplikasi</p> \n\nAplikasi GUIDE ANIME ini original dibuat oleh GETSU CODE, aplikasi ini diperuntukkan sebagai template GUIDE yang nanti bisa di Reskin atau di kembangkan kembali menjadi source code aplikasi yang baru\ncontoh penerapan aplikasi GUIDE ini bisa menjadi: \n\n
+        1. Aplikasi berita\n
+        2. Aplikasi menu makanan\n
+        3. Aplikasi galeri produk\n</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="List">List</string>
+    <string name="profile_dan_lokasi_developer">Profile dan Lokasi Developer</string>
+    <string name="Alamat">JL. Mangunsarkoro RT 001 / RW 010 Cianjur</string>
+    <string name="Lokasi">Jawa Barat, Indonesia</string>
+    <string name="tentang_kami">Tentang Kami</string>
+</resources>
