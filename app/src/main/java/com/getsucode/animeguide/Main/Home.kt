@@ -23,7 +23,7 @@ class Home : AppCompatActivity() {
     private var title = "ANIME GUIDE"
     private val list = ArrayList<Character>()
 
-    // Test konek github
+    // Test konek github ke 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
