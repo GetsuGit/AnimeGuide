@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
     tools:context=".Main.Home">
 
-    <FrameLayout
-        android:id="@+id/frameFragment"
+    <LinearLayout
+        android:id="@+id/framelist"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             tools:listitem="@layout/item_row_anime" />
 
-    </FrameLayout>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -31,12 +31,12 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@color/background_p"
-        app:itemIconTint="@color/icon_normal"
         app:itemIconSize="30dp"
+        app:itemIconTint="@color/icon_normal"
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_nav_anime"/>
+        app:menu="@menu/menu_nav_anime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

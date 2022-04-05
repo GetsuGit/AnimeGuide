@@ -11,55 +11,76 @@
         android:id="@+id/Jasa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="35dp"
-        android:text=" Jasa Pembuatan \n  Aplikasi Android"
-        android:textColor="@color/anime_text"
-        android:textStyle="bold"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/century1"
         android:justificationMode="inter_word"
-        android:layout_marginTop="120dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="Anime Guide"
+        android:textColor="@color/anime_text"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/poster"
         android:layout_width="350dp"
         android:layout_height="320dp"
+        android:layout_marginTop="50dp"
         android:paddingLeft="29dp"
         android:paddingBottom="80dp"
         android:scaleType="fitCenter"
         android:src="@drawable/info"
-        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Jasa"/>
+        app:layout_constraintTop_toBottomOf="@id/Jasa" />
 
     <Button
         android:id="@+id/btnFollow"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/century1"
         android:layout_marginTop="5dp"
         android:background="@drawable/button_effect"
+        android:fontFamily="@font/century1"
         android:text="Cek Sekarang"
         android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poster" />
 
     <TextView
+        android:id="@+id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/century1"
-        android:textColor="@color/anime_text"
         android:layout_marginTop="30dp"
-        android:textSize="13dp"
+        android:fontFamily="@font/century1"
         android:text="2018 - 2022 GETSU CODE. All Right Reserved."
-        app:layout_constraintTop_toBottomOf="@id/btnFollow"
+        android:textColor="@color/anime_text"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnFollow" />
+
+    <LinearLayout
+        android:id="@+id/frameAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt">
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/Unit_Iklan">
+
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -67,12 +88,12 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@color/background_p"
-        app:itemIconTint="@color/icon_normal"
         app:itemIconSize="30dp"
+        app:itemIconTint="@color/icon_normal"
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_info_anime"/>
+        app:menu="@menu/menu_info_anime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

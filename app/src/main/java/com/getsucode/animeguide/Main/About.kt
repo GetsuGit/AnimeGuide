@@ -8,6 +8,10 @@ import android.widget.ImageView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import com.getsucode.animeguide.R
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class About : AppCompatActivity() {
@@ -18,6 +22,8 @@ class About : AppCompatActivity() {
     private lateinit var Facebook: ImageView
     private lateinit var Youtube: ImageView
     private lateinit var WhatsApp: ImageView
+
+    lateinit var bannerAdView: AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +39,7 @@ class About : AppCompatActivity() {
         WhatsApp = findViewById(R.id.WhatsApp)
 
         Sosmed()
+        setAds()
 
         // button navigasi
 
@@ -109,5 +116,45 @@ class About : AppCompatActivity() {
             )
             startActivity(intent)
         }
+    }
+
+    private fun setAds() {
+
+        MobileAds.initialize(this)
+        bannerAdView = findViewById(R.id.banner_ad)
+
+        val adRequest = AdRequest.Builder().build()
+        bannerAdView.loadAd(adRequest)
+        bannerAdView.setAdListener(object : AdListener() {
+            override fun onAdClosed() {
+                super.onAdClosed()
+                //do something on ad is closed
+            }
+
+            override fun onAdFailedToLoad(i: Int) {
+                super.onAdFailedToLoad(i)
+                //do something if ad failed to load
+            }
+
+            override fun onAdLeftApplication() {
+                super.onAdLeftApplication()
+            }
+
+            override fun onAdOpened() {
+                super.onAdOpened()
+            }
+
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+            }
+
+            override fun onAdClicked() {
+                super.onAdClicked()
+            }
+
+            override fun onAdImpression() {
+                super.onAdImpression()
+            }
+        })
     }
 }

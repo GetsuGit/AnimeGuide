@@ -50,6 +50,7 @@ class ListCharacterAdapter(private val listCharacter: ArrayList<Character>) :
     }
 
     inner class ListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
         var imgAnime: ImageView = itemView.findViewById(R.id.img_anime)
         var tvName: TextView = itemView.findViewById(R.id.tv_anime_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_anime_detail)

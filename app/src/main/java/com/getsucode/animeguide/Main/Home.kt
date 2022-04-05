@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,10 @@ import com.getsucode.animeguide.Adapter.ListCharacterAdapter
 import com.getsucode.animeguide.Model.Character
 import com.getsucode.animeguide.R
 import com.getsucode.animeguide.Repository.CharacterData
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home : AppCompatActivity() {
@@ -30,6 +35,7 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         setActionBarTitle(title)
+
 
         // webview
 
@@ -97,9 +103,9 @@ class Home : AppCompatActivity() {
             }
             R.id.miClose -> {
 
-                    Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    Intent.FLAG_ACTIVITY_NEW_TASK
-                    onBackPressed()
+                Intent.FLAG_ACTIVITY_CLEAR_TASK
+                Intent.FLAG_ACTIVITY_NEW_TASK
+                onBackPressed()
             }
         }
         return true
@@ -133,7 +139,7 @@ class Home : AppCompatActivity() {
 
         startActivity(detailCharacter)
 
-        //Toast.makeText(this, "Kamu memilih" + character.name, Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Kamu memilih" + character.name, Toast.LENGTH_LONG).show()
 
     }
 
@@ -141,7 +147,7 @@ class Home : AppCompatActivity() {
 
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.frameFragment, fragment)
+            replace(R.id.framelist, fragment)
             commit()
         }
 

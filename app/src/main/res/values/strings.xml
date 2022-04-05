@@ -22,4 +22,8 @@
     <string name="Alamat">JL. Mangunsarkoro RT 001 / RW 010 Cianjur</string>
     <string name="Lokasi">Jawa Barat, Indonesia</string>
     <string name="tentang_kami">Tentang Kami</string>
+
+    <!-- Ads -->
+    <string name="Unit_Iklan">ca-app-pub-5301776565080135/3637624386</string>
+    <string name="Unit_App_ID">ca-app-pub-5301776565080135~2208992643</string>
 </resources>
